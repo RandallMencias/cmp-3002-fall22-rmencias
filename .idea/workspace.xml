@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bab0c23-c07e-4b2d-934c-c33ee59d0c48" name="Changes" comment="workspace.xml">
+    <list default="true" id="2bab0c23-c07e-4b2d-934c-c33ee59d0c48" name="Changes" comment="Added delete functionalities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW1/Excercise_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW1/Excercise_7.py" afterDir="false" />
     </list>
@@ -48,7 +48,29 @@
       <recent name="C:\Users\Randall\Documents\GitHub\cmp-3002-fall22-rmencias" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.prueba">
+  <component name="RunManager" selected="Python.Excercise_7">
+    <configuration name="Excercise_7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cmp-3002-fall22-rmencias" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW1/Excercise_7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Exercise_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cmp-3002-fall22-rmencias" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Excercise_7" />
         <item itemvalue="Python.prueba" />
         <item itemvalue="Python.Exercise_4" />
       </list>
@@ -108,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661869495709</updated>
-      <workItem from="1664044739242" duration="13733000" />
+      <workItem from="1664044739242" duration="14361000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Excercise 2&quot;">
       <created>1661869702703</created>
@@ -180,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664056070499</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added delete functionalities">
+      <created>1664062021343</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664062021343</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +236,8 @@
     <MESSAGE value="Declaration of Array Class" />
     <MESSAGE value="Finished Program" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Added delete functionalities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added delete functionalities" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cmp_3002_fall22_rmencias$prueba.coverage" NAME="prueba Coverage Results" MODIFIED="1664061884082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW1" />

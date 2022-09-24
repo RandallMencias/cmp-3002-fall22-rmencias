@@ -118,10 +118,14 @@ class Array(Array):
         self.l += 1
 
     def delete_tail(self):
+        if self.l == 0:
+            raise ValueError("no items to delete")
         self.array[self.l-1] = None
         self.l -= 1
 
     def delete_head(self):
+        if self.l == 0:
+            raise ValueError("no items to delete")
         self.array[0] = None
         for i in range(0,self.l-1):
             self.array[i] = self.array[i+1]
@@ -129,6 +133,9 @@ class Array(Array):
         self.array[self.l]= None
 
     def delete(self, index):
+        if (index < 0) or (index >= self.l):
+            raise IndexError('index out of range!')
+
         self.array[index] = None
         for i in range(index, self.l-1):
             self.array[i] = self.array[i+1]
@@ -139,12 +146,12 @@ class Array(Array):
 
 
 def main():
-    x = Array(5, [9,4,5,6,3])
+    x = Array(5)
     # x.insert_to_head(9)
     # x.insert_to_head(13)
     # x.insert_to_head(4)
     print(x.list_array2())
-    x.delete(1)
+    x.delete_head()
     print(x.list_array2())
 
 if __name__ == "__main__":
