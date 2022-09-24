@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bab0c23-c07e-4b2d-934c-c33ee59d0c48" name="Changes" comment="HW1_Exercise_4">
+    <list default="true" id="2bab0c23-c07e-4b2d-934c-c33ee59d0c48" name="Changes" comment="Clock Decorator added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW1/Exercise_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW1/Exercise_4.py" afterDir="false" />
     </list>
@@ -107,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661869495709</updated>
-      <workItem from="1664044739242" duration="2297000" />
+      <workItem from="1664044739242" duration="3599000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Excercise 2&quot;">
       <created>1661869702703</created>
@@ -130,7 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664044952444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Clock Decorator added">
+      <created>1664047244134</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664047244135</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Clock Decorator added">
+      <created>1664047256673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664047256673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,10 +165,11 @@
     <MESSAGE value="&quot;Excercise 2&quot;" />
     <MESSAGE value="&quot;Renombrado&quot;" />
     <MESSAGE value="HW1_Exercise_4" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW1_Exercise_4" />
+    <MESSAGE value="Clock Decorator added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clock Decorator added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cmp_3002_fall22_rmencias$prueba.coverage" NAME="prueba Coverage Results" MODIFIED="1664046774558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW1" />
-    <SUITE FILE_PATH="coverage/cmp_3002_fall22_rmencias$Exercise_4.coverage" NAME="Exercise_4 Coverage Results" MODIFIED="1664047001693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW1" />
+    <SUITE FILE_PATH="coverage/cmp_3002_fall22_rmencias$Exercise_4.coverage" NAME="Exercise_4 Coverage Results" MODIFIED="1664048346150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW1" />
   </component>
 </project>
