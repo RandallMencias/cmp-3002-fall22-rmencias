@@ -1,6 +1,3 @@
-import time
-
-
 import ctypes
 
 
@@ -24,30 +21,13 @@ class Array(object):
         return (n * ctypes.py_object)()
 
 
-class Array(Array):
-    def __getitem__(self, item_index):
-        """
-        Return element at item_index
-        """
-        if (item_index < 0) or (item_index >= self.n):
-            raise IndexError('index out of range!')
-        try:
-            x = self.array[item_index]
-        except ValueError:
-            x = None
-        return x
-
-    def __setitem__(self, item_index, item):
-        """
-        Set element at item_index
-        """
-        if (item_index < 0) or (item_index >= self.n):
-            raise IndexError('index out of range!')
-        self.array[item_index] = item
 
 class Array(Array):
 
     def __init__(self, n, values=None):
+        """
+        Initialize empty array
+        """
         self.l = 0
         self.n = n
         self.array = self._create_array(self.n)
@@ -78,6 +58,27 @@ class Array(Array):
                 y.append(str(x))
             else:
                 y.append('_')
+        return ", ".join(y)
+
+    def __getitem__(self, item_index):
+        """
+        Return element at item_index
+        """
+        if (item_index < 0) or (item_index >= self.n):
+            raise IndexError('index out of range!')
+        try:
+            x = self.array[item_index]
+        except ValueError:
+            x = None
+        return x
+
+    def __setitem__(self, item_index, item):
+        """
+        Set element at item_index
+        """
+        if (item_index < 0) or (item_index >= self.n):
+            raise IndexError('index out of range!')
+        self.array[item_index] = item
 
     def insert_to_tail(self, item):
         """
@@ -116,11 +117,35 @@ class Array(Array):
         self.array[index] = element
         self.l += 1
 
+    def delete_tail(self):
+        self.array[self.l-1] = None
+        self.l -= 1
+
+    def delete_head(self):
+        self.array[0] = None
+        for i in range(0,self.l-1):
+            self.array[i] = self.array[i+1]
+        self.l -= 1
+        self.array[self.l]= None
+
+    def delete(self, index):
+        self.array[index] = None
+        for i in range(index, self.l-1):
+            self.array[i] = self.array[i+1]
+
+        self.l -= 1
+        self.array[self.l] = None
+
+
 
 def main():
-    x = Array(5, [0,-2,6,5,3])
-    print(x.list_array())
-
+    x = Array(5, [9,4,5,6,3])
+    # x.insert_to_head(9)
+    # x.insert_to_head(13)
+    # x.insert_to_head(4)
+    print(x.list_array2())
+    x.delete(1)
+    print(x.list_array2())
 
 if __name__ == "__main__":
     main()
