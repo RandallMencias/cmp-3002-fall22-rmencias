@@ -5,7 +5,7 @@ def clock(func):
         start = time.time()
         answer = func(args)
         end = time.time()
-        print("Execution Time:" + str(end-start) + "ms\nTotal Sum = " + str(answer))
+        print("Execution Time:" + str(end-start) + "s\nTotal Sum = " + str(answer)+"\n")
         return answer
     return inner
 
