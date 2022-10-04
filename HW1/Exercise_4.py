@@ -44,42 +44,15 @@ if __name__ == "__main__":
     main(103)
     main(527)
     print("N timings")
-    runtime1 = [sum1(x)[1] for x in [1, 10, 100, 1000, 10000,100000,1000000,10000000,100000000,1000000000]]
-    runtime2 = [sum2(x)[1] for x in [1, 10, 100, 1000, 10000,100000,1000000,10000000,100000000,1000000000]]
-    x = [1, 10, 100, 1000, 10000, 100000, 1000000,10000000,100000000,1000000000]
-    print(runtime1)
-    print(runtime2)
-    plt.plot(x, runtime1, label= "Sum1")
+    runtime1 = [sum1(x)[1] for x in [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000]]
+    runtime2 = [sum2(x)[1] for x in [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000]]
+    x = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000]
+    print("Sum1 runtimes:", runtime1)
+    print("Sum2 runtimes:", runtime2)
+    plt.plot(x, runtime1, label="Sum1")
     plt.plot(x, runtime2, label="Sum2")
     plt.xlabel('n')
     plt.ylabel('runtime')
     plt.title("Loop Vs Gaussian Sum")
     plt.grid()
     plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
