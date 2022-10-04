@@ -10,7 +10,7 @@ def clock(func):
         start = time() * 10 ** 9
         answer = func(args)
         end = time() * 10 ** 9
-        print("Execution Time:" + str(end - start) + "s\nTotal Sum = " + str(answer) + "\n")
+        print("Execution Time:" + str(end - start) + "ns\nTotal Sum = " + str(answer) + "\n")
         return answer, end - start
 
     return inner
