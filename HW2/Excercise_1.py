@@ -70,6 +70,10 @@ class Stack(object):
             Return size of the stack
             """
             return self.l
+
+        def push(self,item):
+            '''Adds new element to the stack'''
+
 # push(item) - store an element on the stack
 # pop() - remove an element from the stack
 # top() - get the top data element of the stack, without removing it
