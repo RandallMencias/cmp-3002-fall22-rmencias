@@ -17,6 +17,59 @@ class Stack(object):
         """
         return (n * ctypes.py_object)()
 
+    class Stack(Stack):
+        def push(self, item):
+            """
+            Add new item to the stack
+            """
+            if self.l == self.n:
+                raise ValueError("no more capacity")
+            self.stack[self.l] = item
+            self.l += 1
+
+        def pop(self):
+            """
+            Remove an element from the stack
+            """
+            # self.l = 0
+            # 0 is equivalent to False
+            # any number != 0 is True
+            if not self.l:
+                raise ('stack is empty')
+            c = self.stack[self.l - 1]
+            self.stack[self.l] = ctypes.py_object
+            self.l -= 1
+            return c
+
+        def top(self):
+            """
+            Show the top element of the stack
+            """
+            return self.stack[self.l - 1]
+
+        def full(self):
+            """
+            Is the stack full?
+            """
+            return self.l == self.n
+            # if self.l == self.n:
+            #    return True
+            # return False
+
+        def empty(self):
+            """
+            Is the stack empty?
+            """
+            return self.l == 0
+            # if self.l == 0:
+            #    return True
+            # return False
+
+        def size(self):
+            """
+            Return size of the stack
+            """
+            return self.l
 # push(item) - store an element on the stack
 # pop() - remove an element from the stack
 # top() - get the top data element of the stack, without removing it
