@@ -71,5 +71,21 @@ class Stack(object):
             """
             return self.l
 
+        def reverse(self):
+            prev = self.top
+            cur = self.top
+            cur = cur.next
+            succ = None
+            prev.next = None
+
+            while (cur != None):
+                succ = cur.next
+                cur.next = prev
+                prev = cur
+                cur = succ
+
+            self.top = pre
+
+
 
 
