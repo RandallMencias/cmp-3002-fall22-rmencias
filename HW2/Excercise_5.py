@@ -1,3 +1,18 @@
+import random
+from time import time
+
+
+def clock(func):
+    def inner(*args, **kwargs):
+        start = time() * 10 ** 9
+        answer = func(*args, **kwargs)
+        end = time() * 10 ** 9
+        # print("Execution Time:" + str(end - start) + "ns\nTotal Sum = " + str(answer) + "\n")
+        return answer, end - start
+
+    return inner
+
+
 class Node:
     """
     Implementation of a node
@@ -18,9 +33,11 @@ class Singly_linked_list(object):
 
     def list_traversed(self):
         node = self.head_node
+        a = ''
         while node:
-            print(node.val)
+            a = a + str(node.val) + "->"
             node = node.next_node
+        print(a)
 
     def insert_head(self, new_node):
         # insert to the head
@@ -59,65 +76,34 @@ class Singly_linked_list(object):
         node = None
 
 
-class Stack(object):
-    def __init__(self):
-        self.stack = self._create_stack()
+@clock
+def transform(int1, int2, int3):
+    list1 = Singly_linked_list()
+    list2 = Singly_linked_list()
+    list3 = Singly_linked_list()
+    list4 = Singly_linked_list()
 
-    def _create_stack(self):
-        """
-        Creates a new stack of capacity n
-        """
-        return Singly_linked_list()
+    n = len(str(int1))
+    sum = int1 + int2 + int3
+    a = 0
+    for i in range(n - 1, -1, -1):
+        list1.insert_head(Node(int(str(int1)[i])))
+        list2.insert_head(Node(int(str(int2)[i])))
+        list3.insert_head(Node(int(str(int3)[i])))
+    for i in range(len(str(sum)) - 1, -1, -1):
+        list4.insert_head(Node(int(str(sum)[i])))
 
-    def push(self, item):
-        """
-            Add new item to the stack
-            """
-
-        self.stack.insert_head(Node(item))
-
-    def pop(self):
-        """
-            Remove an element from the stack
-        """
-        self.stack.delete()
-
-    def top(self):
-        """
-            Show the top element of the stack
-            """
-        return self.stack.head_node
-
-    # def full(self):
-    #     """
-    #         Is the stack full?
-    #         """
-    #     return self.l == self.n
-        # if self.l == self.n:
-        #    return True
-        # return False
-
-    def empty(self):
-        """
-            Is the stack empty?
-            """
-        return self.stack.head_node is not None
-
-    # def size(self):
-    #     """
-    #         Return size of the stack
-    #         """
-    #     return self.l
-
-    def print(self):
-        self.stack.list_traversed()
+    # list1.list_traversed()
+    # list2.list_traversed()
+    # list3.list_traversed()
+    # print("_"*10*n+"__")
+    list4.list_traversed()
 
 
+def ran(i):
+    return (random.randint(i, i * 10))
 
-S = Stack()
-S.push(1)
-S.push(2)
-S.push(4)
-S.push(-1)
-S.print()
 
+runtime1 = [transform(ran(10 ** i), ran(10 ** i), ran(10 ** i))[1] for i in range(51)]
+
+print(runtime1)
