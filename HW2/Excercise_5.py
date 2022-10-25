@@ -32,29 +32,36 @@ class Singly_linked_list(object):
         self.head_node = head_node
 
     def list_traversed(self):
+
         node = self.head_node
         a = ''
         while node:
             a = a + str(node.val) + "->"
             node = node.next_node
         print(a)
-    def tail(self):
+    def get_tail(self):
+        """
+        Gets tail
+        Output: tail
+        """
         node = self.head_node
         while node:
             prev = node
             node = node.next_node
         return prev
     def insert_head(self, new_node):
-        # insert to the head
-        # A -> B -> null
-        # R -> A -> B -> null
+        """
+        Inserts new head
+        Input: Node
+        """
         new_node.set_next_node(self.head_node)
         self.head_node = new_node
 
     def insert_tail(self, new_node):
-        # insert to the tail
-        # A -> B -> null
-        # A -> B -> R -> null
+        """
+        Inserts new tail
+        Input: Node
+        """
         node = self.head_node
         prev = None
         while node:
@@ -63,9 +70,10 @@ class Singly_linked_list(object):
         prev.set_next_node(new_node)
 
     def insert_middle(self, new_node, value):
-        # insert in the middle
-        # A -> B -> C -> null
-        # A -> B -> R -> C -> null
+        """
+        Inserts Node after value
+        Input: Node, value before Node
+                        """
         node = self.head_node
         while node.val != value:
             node = node.next_node
@@ -75,6 +83,9 @@ class Singly_linked_list(object):
         else:
             self.insert_tail(new_node)
     def reverse(self):
+        """
+        Reverses list
+        """
         node = self.head_node
         prev = None
         while node is not None:
@@ -86,6 +97,9 @@ class Singly_linked_list(object):
 
 
     def delete(self):
+        """
+        Deletes Head and remplaces with next node
+        """
         node = self.head_node
         self.head_node = node.next_node
         node = None
@@ -93,6 +107,10 @@ class Singly_linked_list(object):
 
 
 def transform(int1, int2, int3):
+    """
+    Transforms 3 Integers to SLl and prints out the sum
+    Input: int1, int2, int3
+    """
     list1 = Singly_linked_list()
     list2 = Singly_linked_list()
     list3 = Singly_linked_list()

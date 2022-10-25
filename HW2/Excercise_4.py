@@ -27,33 +27,39 @@ class PriorityQueue(object):
         self.l += 1
 
     def deque(self):
-        vip = None
+        """
+        Returns value with highest priority and removes it
+        Output: Value of highest priority
+                        """
+        miv = None
         priority = 0
         contador = 0
-        for x in range(self.l):
-            if self.queue[x][1] > priority:
-                priority = self.queue[x][1]
-                vip = self.queue[x]
+        for x in range(self.l): #checks through all the queue
+            if self.queue[x][1] > priority: #if priority of one value is bigger than another
+                priority = self.queue[x][1] #assigns the priority of Miv
+                miv = self.queue[x] #saves Miv
 
-        if self.queue[self.l - 1] != vip:
+        if self.queue[self.l - 1] != miv: #checks miv isnt the last value
             for x in range(self.l):
-                if self.queue[x] == vip:
+                if self.queue[x] == miv:
+                    #Skips the Miv Value decreses counter by one to match new size
                     self.queue[contador] = self.queue[x + 1]
                     contador -= 1
                 else:
+                    #assingns the value of the list by contador to the list of x
                     self.queue[contador] = self.queue[x]
                 contador += 1
 
-        self.queue[self.l - 1] = None
+        self.queue[self.l - 1] = None #deletes last reapeated value
         self.l -= 1
-        return vip[0]
+        return miv[0]
 
 
 
 
-
+        #Alternate method for elminating Miv from queue
         # for x in range(self.l):
-        #     if self.queue[x] is not vip:
+        #     if self.queue[x] is not miv:
         #         temp.enqueue(self.queue[x])
         # self.queue = temp.queue
         # self.l -= 1

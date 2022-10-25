@@ -80,21 +80,31 @@ class Queue(object):
         self.n = n
         self.stack = self._create_queue(self.n)
 
-    def _create_queue(self, n):
+    def _create_queue(self, n): #creates queue using a Stack
         return Stack(n)
 
     def enqueue(self, item):
+        """
+        Adds item to queue
+        Input: item
+                        """
         self.stack.push(item)
 
     def deque(self):
-        temp = Stack(self.stack.l)
+        """
+        Returns head and removes it
+        Output: Stack head
+                        """
+        temp = Stack(self.stack.l) #creates a temo stack
+        head = self.stack.top() #gets top value
         for i in range(self.stack.l-1):
             temp.push(self.stack.top())
-            self.stack.pop()
-        self.stack.pop()
+            self.stack.pop() #reverses the stack value into temp except for the last value
+        self.stack.pop() #empties stack
         for i in range(temp.l):
             self.stack.push(temp.top())
-            temp.pop()
+            temp.pop() #reverses values back into self stack
+        return head
 
 
 
@@ -122,8 +132,8 @@ S.enqueue(4)
 S.enqueue(-1)
 S.print()
 S.deque()
-print("hopa")
-S.print()
+print("Hola")
 print(S.stack.l)
+
 
 

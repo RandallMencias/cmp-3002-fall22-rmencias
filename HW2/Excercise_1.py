@@ -17,22 +17,27 @@ class Singly_linked_list(object):
         self.head_node = head_node
 
     def list_traversed(self):
+        """
+        Output: prints list
+         """
         node = self.head_node
         while node:
             print(node.val)
             node = node.next_node
 
     def insert_head(self, new_node):
-        # insert to the head
-        # A -> B -> null
-        # R -> A -> B -> null
+        """
+        Inserts new head
+        Input: Node
+        """
         new_node.set_next_node(self.head_node)
         self.head_node = new_node
 
     def insert_tail(self, new_node):
-        # insert to the tail
-        # A -> B -> null
-        # A -> B -> R -> null
+        """
+                Inserts new tail
+                Input: Node
+                """
         node = self.head_node
         prev = None
         while node:
@@ -41,9 +46,11 @@ class Singly_linked_list(object):
         prev.set_next_node(new_node)
 
     def insert_middle(self, new_node, value):
-        # insert in the middle
-        # A -> B -> C -> null
-        # A -> B -> R -> C -> null
+        """
+                Inserts Node after value
+                Input: Node
+                value: Node before new Node
+                """
         node = self.head_node
         while node.val != value:
             node = node.next_node
@@ -54,6 +61,9 @@ class Singly_linked_list(object):
             self.insert_tail(new_node)
 
     def delete(self):
+        """
+        Deletes Head and remplaces with next node
+        """
         node = self.head_node
         self.head_node = node.next_node
         node = None
@@ -67,7 +77,7 @@ class Stack(object):
         """
         Creates a new stack of capacity n
         """
-        return Singly_linked_list()
+        return Singly_linked_list() #Creates stack with Sll
 
     def push(self, item):
         """
@@ -88,14 +98,13 @@ class Stack(object):
             """
         return self.stack.head_node
 
+
+    #Stack has no size
     # def full(self):
     #     """
     #         Is the stack full?
     #         """
-    #     return self.l == self.n
-        # if self.l == self.n:
-        #    return True
-        # return False
+    #     return self.stack.l == self.stack.n
 
     def empty(self):
         """
@@ -113,11 +122,9 @@ class Stack(object):
         self.stack.list_traversed()
 
 
-
 S = Stack()
 S.push(1)
 S.push(2)
 S.push(4)
 S.push(-1)
 S.print()
-
