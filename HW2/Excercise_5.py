@@ -7,9 +7,10 @@ import time
 
 def clock(func):
     def inner(*arg):
-        start = time.time()*10 ** 6
+        start = time.time()*10 ** 3
         answer = func(*arg)
-        end = time.time() * 10 ** 6
+        time.sleep(0.1)
+        end = time.time() * 10 ** 3
         #print("Execution Time:" + str(end - start))
         return answer, (end - start)
 
@@ -154,33 +155,33 @@ def transform(int1, int2, int3):
     list1.reverse()
     list2.reverse()
     list3.reverse()
-    # list4.list_traversed()
-    return list4
-    #prints the lists
-    # list1.list_traversed()
-    # list2.list_traversed()
-    # list3.list_traversed()
-    # print("_"*n*4)
-    #
+
+    # return list4
+    # prints the lists
+    list1.list_traversed()
+    list2.list_traversed()
+    list3.list_traversed()
+    print("_"*n*4)
+    list4.list_traversed()
 
 
 
-# transform(9999,9999,9999)
+transform(9999,9999,9999)
 #
 
 # print(transform(123559,115439, 115359)[1])
 
-def ran(i):
-    return random.randint(10 ** (i - 1), (10 ** i)-1)
-#
-# for i in range(1,101):
-#     print(ran(i))
-
-runtime = [transform(ran(i), ran(i), ran(i))[1] for i in range(1,1001)]
+# def ran(i):
+#     return random.randint(10 ** (i - 1), (10 ** i)-1)
+# #
+# # for i in range(1,101):
+# #     print(transform(ran(i), ran(i), ran(i))[1])
+# #
+# runtime = [transform(ran(i), ran(i), ran(i))[1] for i in range(1,101)]
 # print(runtime)
-plt.plot(runtime)
-plt.grid()
-plt.xlabel('Character len')
-plt.ylabel('runtime')
-plt.title("Linked list Sum")
-plt.show()
+# # plt.plot(runtime)
+# # plt.grid()
+# # plt.xlabel('Character len')
+# # plt.ylabel('runtime')
+# # plt.title("Linked list Sum")
+# # plt.show()
