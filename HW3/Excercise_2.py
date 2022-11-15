@@ -17,6 +17,5 @@ def main():
     list1 = [4, 5, 3, 1, 10, 4, 6, 8]
     print(quicksort(list1))
 
-
 if __name__ == "__main__":
     main()
