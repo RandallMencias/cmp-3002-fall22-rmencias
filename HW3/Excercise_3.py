@@ -1,23 +1,26 @@
 import random
 import time
 
+
 def clock(func):
     def inner(*arg, **kwargs):
         start = time.time() * 10 ** 3
         answer = func(*arg, **kwargs)
-        time.sleep(0.1)
+        # time.sleep(0.001)
         end = time.time() * 10 ** 3
-        #print("Execution Time:" + str(end - start))
+        # print("Execution Time:" + str(end - start))
         return answer, (end - start)
 
     return inner
 
+
+@clock
 def merge_sort(nums):
     if len(nums) <= 1:
         return nums
     pivot = int(len(nums) / 2)
-    left = merge_sort(nums[0:pivot])
-    right = merge_sort(nums[pivot:])
+    left = merge_sort(nums[0:pivot])[0]
+    right = merge_sort(nums[pivot:])[0]
     return merge(left, right)
 
 
@@ -38,6 +41,8 @@ def merge(left, right):
 
     return sorted_list
 
+
+@clock
 def quicksort(list):
     if len(list) <= 1:
         return list
@@ -50,22 +55,19 @@ def quicksort(list):
         else:
             l2.append(i)
 
-    return quicksort(l1) + [pivot] + quicksort(l2)
-
+    return quicksort(l1)[0] + [pivot] + quicksort(l2)[0]
 
 
 def generate_random_list():
     return [random.randint(1, 1000) for i in range(1000)]
 
+
 def main():
-    lists = [generate_random_list() for i in range(2)]
+    lists = [generate_random_list() for i in range(1000)]
     merge_sort_time = [merge_sort(i)[1] for i in lists]
-    print(merge_sort_time)
-    quicksort_time = [quicksort(i) for i in lists]
-    # print(merge_sort_time, quicksort_time)
+    quicksort_time = [quicksort(i)[1] for i in lists]
+    print(merge_sort_time, quicksort_time)
+
 
 if __name__ == "__main__":
     main()
-
-
-
