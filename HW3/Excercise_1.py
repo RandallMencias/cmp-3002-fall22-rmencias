@@ -111,7 +111,6 @@ def main():
     list3 = Singly_linked_list()
 
     list3.head_node = merge(list1.head_node, list2.head_node)
-    print("Merge:")
     list3.list_traversed()
 
 if __name__ == '__main__':

@@ -1,5 +1,8 @@
 import random
 import time
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 
 def clock(func):
@@ -58,15 +61,25 @@ def quicksort(list):
     return quicksort(l1)[0] + [pivot] + quicksort(l2)[0]
 
 
-def generate_random_list():
+def random_list():
     return [random.randint(1, 1000) for i in range(1000)]
 
 
 def main():
-    lists = [generate_random_list() for i in range(1000)]
-    merge_sort_time = [merge_sort(i)[1] for i in lists]
-    quicksort_time = [quicksort(i)[1] for i in lists]
+    merge_sort_time = []
+    quicksort_time = []
+    lists = [random_list() for i in range(100)]
+    for i in lists:
+        merge_sort_time.append(merge_sort(i)[1])
+        quicksort_time.append(quicksort(i)[1])
+    # merge_sort_time = [merge_sort(i)[1] for i in lists]
+    # quicksort_time = [quicksort(i)[1] for i in lists]
     print(merge_sort_time, quicksort_time)
+    plt.plot(merge_sort_time, label="Merge Sort")
+    plt.plot(quicksort_time, label="Quick Sort")
+    plt.legend()
+    plt.grid
+    plt.show()
 
 
 if __name__ == "__main__":
