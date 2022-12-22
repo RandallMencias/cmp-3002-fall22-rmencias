@@ -31,25 +31,31 @@ class BinarySearchTree:
         return self.key
 
     def preorder(self):
-        print(self.key)
+        temp = []
+        temp.append(self.key)
         if self.leftChild:
-            self.leftChild.preorder()
+            temp.extend(self.leftChild.preorder())
         if self.rightChild:
-            self.rightChild.preorder()
-
-    def postorder(self):
-        if self.leftChild:
-            self.leftChild.postorder()
-        if self.rightChild:
-            self.rightChild.postorder()
-        print(self.key)
+            temp.extend(self.rightChild.preorder())
+        return temp
 
     def inorder(self):
+        temp = []
         if self.leftChild:
-            self.leftChild.inorder()
-        print(self.key)
+            temp.extend(self.leftChild.inorder())
+        temp.append(self.key)
         if self.rightChild:
-            self.rightChild.inorder()
+            temp.extend(self.rightChild.inorder())
+        return temp
+
+    def postorder(self):
+        temp = []
+        if self.leftChild:
+            temp.extend(self.leftChild.postorder())
+        if self.rightChild:
+            temp.extend(self.rightChild.postorder())
+        temp.append(self.key)
+        return temp
 
     def search(self, node):
         if node == self.key:
